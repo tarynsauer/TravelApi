@@ -2,9 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'Airports API', type: :request do
   let!(:airports) { create_list(:airport, 10) }
+  let(:user) { create(:user) }
+  let(:headers) { valid_headers }
 
   describe 'GET /airports' do
-    before { get '/airports' }
+    before { get '/airports', params: {}, headers: headers }
 
     it 'returns airports' do
       expect(json).not_to be_empty
