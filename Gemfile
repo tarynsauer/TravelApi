@@ -6,10 +6,12 @@ git_source(:github) do |repo_name|
 end
 
 gem 'rails', '~> 5.1.6'
-gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 3.7'
+gem 'active_model_serializers'
 gem 'bcrypt'
 gem 'jwt'
+gem 'pg', '>= 0.18', '< 2.0'
+gem 'puma', '~> 3.7'
+gem 'will_paginate'
 
 group :development, :test do
   gem 'pry'

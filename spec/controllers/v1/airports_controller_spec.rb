@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Airports API', type: :request do
+RSpec.describe 'V1::Airports API', type: :request do
   let!(:airports) { create_list(:airport, 10) }
   let(:user) { create(:user) }
   let(:headers) { valid_headers }
