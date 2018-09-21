@@ -18,15 +18,17 @@ ActiveRecord::Schema.define(version: 20180918165617) do
   create_table "airports", force: :cascade do |t|
     t.string "name", null: false
     t.string "city"
-    t.string "description", null: false
+    t.string "country"
+    t.text "description", null: false
     t.string "website"
     t.string "iata", limit: 3, null: false
     t.string "icao", limit: 4
-    t.string "faa_lid", limit: 2
+    t.string "faa_lid", limit: 3
     t.decimal "latitude", precision: 10, scale: 6, null: false
     t.decimal "longitude", precision: 10, scale: 6, null: false
     t.string "timezone", null: false
     t.string "utc_offset", null: false
+    t.integer "total_flights"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
