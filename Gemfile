@@ -15,6 +15,7 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'will_paginate'
 
 group :development, :test do
+  gem 'awesome_print'
   gem 'pry'
   gem 'rspec-rails'
 end
