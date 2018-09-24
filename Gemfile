@@ -12,6 +12,7 @@ gem 'jwt'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
 gem 'rack-cors', require: 'rack/cors'
+gem 'searchkick'
 gem 'will_paginate'
 
 group :development, :test do

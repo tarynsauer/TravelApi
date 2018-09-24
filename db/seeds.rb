@@ -30,4 +30,6 @@ csv.each do |row|
   end
 end
 
+Airport.reindex
+
 puts "Created #{count} Airports"
