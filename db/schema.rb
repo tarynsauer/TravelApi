@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180918165617) do
+ActiveRecord::Schema.define(version: 20180925183350) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(version: 20180918165617) do
     t.integer "total_flights"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "businesses", id: false, force: :cascade do |t|
+    t.string "id", null: false
+    t.bigint "airport_id"
+    t.json "payload", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["airport_id"], name: "index_businesses_on_airport_id"
   end
 
   create_table "users", force: :cascade do |t|
