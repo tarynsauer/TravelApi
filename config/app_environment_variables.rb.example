@@ -1,0 +1,5 @@
+ENV['YELP_API_KEY'] = 'YOUR-YELP-API-KEY'
+ENV['YELP_API_BUSINESS_SEARCH_HOST'] = 'https://api.yelp.com/v3/businesses/search'
+ENV['API_USER_NAME'] = 'Example Username'
+ENV['API_USER_EMAIL'] = 'example@email.com'
+ENV['API_USER_PASSWORD'] = 'example-password'
