@@ -6,7 +6,7 @@ Airport.find_each do |airport|
   businesses = YelpClient.search(airport)['businesses']
   businesses.each do |business|
     Business.create(
-      id: business['id'],
+      yelp_id: business['id'],
       airport_id: airport.id,
       payload: business,
     )

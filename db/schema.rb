@@ -16,25 +16,27 @@ ActiveRecord::Schema.define(version: 20180925183350) do
   enable_extension "plpgsql"
 
   create_table "airports", force: :cascade do |t|
-    t.string "name", null: false
     t.string "city"
-    t.string "country"
-    t.text "description", null: false
-    t.string "website"
+    t.string "country", null: false
+    t.text "description"
+    t.string "faa_lid", limit: 3
     t.string "iata", limit: 3, null: false
     t.string "icao", limit: 4
-    t.string "faa_lid", limit: 3
     t.decimal "latitude", precision: 10, scale: 6, null: false
     t.decimal "longitude", precision: 10, scale: 6, null: false
-    t.string "timezone", null: false
-    t.string "utc_offset", null: false
+    t.string "location", null: false
+    t.string "name", null: false
+    t.string "state"
     t.integer "total_flights"
+    t.string "timezone", null: false
+    t.string "website"
+    t.string "utc_offset", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "businesses", id: false, force: :cascade do |t|
-    t.string "id", null: false
+  create_table "businesses", force: :cascade do |t|
+    t.string "yelp_id", null: false
     t.bigint "airport_id"
     t.json "payload", null: false
     t.datetime "created_at", null: false
