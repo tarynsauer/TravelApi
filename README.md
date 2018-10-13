@@ -1,5 +1,5 @@
 # TravelApi
-This is an API-only Ruby on Rails application that provides informationn on
+This is an API-only Ruby on Rails application that provides information on
 airports and other travel-related information.
 
 ## Getting started
