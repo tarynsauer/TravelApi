@@ -9,6 +9,7 @@ To start the app:
 * create and seed the database: `rake db:create && rake db:migrate && rake db:seed`
 * run the test suite: `rake db:test:prepare && rspec spec/`
 * add `config/app_environment_variables.rb` (Use `config/app_environment_variables.rb.example` as an example.)
+* start the server: `rails s`
 
 ### TODOs
 * Add beverage resources

@@ -1,3 +1,3 @@
 class Business < ApplicationRecord
-  validates_presence_of :id, :airport_id, :payload
+  validates_presence_of :yelp_id, :airport_id, :payload
 end
